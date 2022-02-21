@@ -1,17 +1,17 @@
 [![License](https://img.shields.io/badge/license-MIT-_red.svg)](https://opensource.org/licenses/MIT)
 
 
-# back-me-up
-This tool will check for Sensitive Data Leakage with some useful patterns/RegEx. The patterns are mostly targeted on waybackdata and filter everything accordingly.
+# BackuoHunter
+This tool will check for Sensitive Data Leakage with some useful patterns/RegEx. The patterns are mostly targeted on waybackdata and filter everything accordingly. I have modified the tool from the original to have Curl as the tool to pull Wayback data. Curl seems more reliable and controllable. I have also added gospider in to the tool.
 
 ## Usage
 ```
-root@me_dheeraj:$ cat > targets.txt
+root@me:$ cat > targets.txt
 target1.tld
 target2.tld
 
-root@me_dheeraj:$ bash bulkyy.sh
-[-] Usage: bash bulkyy.sh [-f/--file] targets.txt
+root@me:$ bash BackupHunter.sh
+[-] Usage: bash BackupHunter.sh [-f/--file] targets.txt
 
 Output will be saved in "output" directory
 ```
@@ -22,7 +22,7 @@ Output will be saved in "output" directory
 </h1>
 
 ##### Prerequisites
-- waybackurls [$ sudo go get github.com/tomnomnom/waybackurls] [@tomnomnom](https://github.com/tomnomnom/waybackurls)
+- gospider [$ GO111MODULE=on go get -u github.com/jaeles-project/gospider] [@j3ssiejjj](https://github.com/jaeles-project/gospider)
 - gauplus [$ sudo go get -u -v github.com/bp0lr/gauplus] [@bp0lr](https://github.com/bp0lr/gauplus)
 - anew [$ sudo go get -u github.com/tomnomnom/anew] [@tomnomnom](https://github.com/tomnomnom/anew)
 - httpx [@pdiscoveryio](https://github.com/projectdiscovery/httpx)
